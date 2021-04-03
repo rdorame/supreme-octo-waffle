@@ -51,7 +51,7 @@ class UserController extends Controller
         $person = User::findOrFail($id);
         $person->update($request->all());
 
-        return $article;
+        return $person;
     }
 
     public function delete(Request $request, $id)
@@ -60,10 +60,6 @@ class UserController extends Controller
         $person->delete();
 
         return 204;
-    }
-
-    public function register (Request $request) {
-        
     }
 
     public function login (Request $request) {

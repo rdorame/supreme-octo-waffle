@@ -29,7 +29,7 @@ class CreateUsersTable extends Migration
             $table->string('rfc')->nullable();
             $table->string('invoiceLegalName')->nullable();
             $table->string('invoiceAddressID')->nullable();
-            $table->enum('type', ['owner', 'admin', 'common']);
+            $table->enum('type', ['owner', 'admin', 'common', 'office', 'cashier']);
             $table->boolean('active')->default(true);
 
             $table->rememberToken();
